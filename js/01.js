@@ -109,8 +109,8 @@
 // 1441 покажет 24:01
 
 // const totalMinutes = 70;
-// const totalMinutes = 450;
-// const totalMinutes = 1441;
+// // const totalMinutes = 450;
+// // const totalMinutes = 1441;
 
 // const hours = Math.floor(totalMinutes / 60);
 // const minutes = totalMinutes % 60;
@@ -120,3 +120,6 @@
 // const doubleDigitHours = String(hours).padStart(2, 0);
 // const doubleDigitMinutes = String(minutes).padStart(2, 0);
 // console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+
+
+   
