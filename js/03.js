@@ -34,7 +34,7 @@
 // // for (let i = 0; i < fruits.length; i += 1) {
 // // console.log(`${i + 1}: ${fruits[i]}`);
 // // }
-
+// или
 // fruits.forEach((value, idx, arr) => { // нет возможности задать шаг
 //     console.log(`${idx + 1}: ${value}`);
 // })
