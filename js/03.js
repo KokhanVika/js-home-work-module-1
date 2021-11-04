@@ -8,10 +8,10 @@
 // const genres = ['Jazz', 'Blues'];
 // genres.push('Рок-н-ролл');
 
-// console.log(genres[0]);
-// console.log(genres[genres.length - 1]);
-// console.log(genres.shift());
-// genres.unshift('Country', 'Reggy')
+// // console.log(genres[0]);
+// // console.log(genres[genres.length - 1]);
+// // console.log(genres.shift());
+// // genres.unshift('Country', 'Reggy')
 // console.log(genres);
 
 // =======Example 2 - Массивы и строки========
@@ -52,4 +52,85 @@
 // for (let i = 0; i < namesArr.length; i += 1) {
 //     console.log(`${namesArr[i]} - ${phonesArr[i]}`);
 // }
+
+// =======Example 5 - Массивы и строки===========
+// Напиши скрипт который выводит в консоль все слова строки кроме первого и последнего.
+//  Результирующая строка не должна начинаться или заканчиваться пробельным символом. 
+//  Скрипт должен работать для любой строки.
+
+// const string = 'Welcome to the future';
+// const strArr = string.split(' '); // превращаем в массив
+// // strArr.shift(); //убираем первое слово
+// // strArr.pop(); // убираем последнее слово
+// const result = strArr.join(' ');
+// console.log(result);
+
+// ======Example 6 - Массивы и строки=========
+// Напиши скрипт который «разворачивает» строку (обратный порядок букв) 
+// и выводит ее в консоль.
+
+// const string = 'Welcome to the future';
+// const strArr = string.split('');
+// strArr.reverse();//реверс посимвольно
+// const result = strArr.join('');//собирает символы в слова
+// console.log(result);
+
+//или через for
+// const string = 'Welcome to the future';
+// const strArr = string.split('');
+// let result = '';
+// for (let i = strArr.length - 1; i >= 0; i -= 1) {
+//     result += strArr[i]; //перебираем от последнего елемента к первому
+// }
+// console.log(result);
+
+// еще вариант
+// const string = 'Welcome to the future';
+// console.log(string.split('').reverse().join(''));//чейнинг цепочка команд
+
+
+// ======Example 7 - Сортировка массива с циклом========
+// Напиши скрипт сортировки массива строк в алфавитном порядке по первой букве элемента.
+
+// const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
+// for (let i = 0; i < langs.length; i += 1) {
+//     for (let j = i + 1; j < langs.length; j += 1) {
+//         if (langs[i][0] > langs[j][0]) { //сравниваем первые буквы слов
+//             const tmp = langs[i];
+//             langs[i] = langs[j];
+//             langs[j] = tmp;
+//         }
+//     }
+// }
+// console.log(langs);//['c++', 'haskel', 'javascript', 'python', 'php', 'ruby']
+
+// Example 8 - Поиск элемента
+// Напиши скрипт поиска самого маленького числа в массиве. 
+// Код должен работать для любого массива чисел. Используй цикл для решения задачи.
+
+// const numbers = [2, 17, 94, 1, 23, 37];
+// let min = numbers[0];
+// for (const number of numbers) {
+//     if (number < min) {
+//         min = number;
+//     }
+// }
+// console.log(min); // 1
+
+// ======extra - сделать реверс каждого слова не меняя порядок слов========
+// 1. разбить на массив слов
+// 2.1 разбить каждое слово на массив символов
+// 2.2 реверснуть
+// 2.3 собрать слово в одну строку
+// 3. собрать текст с массива слов
+
+// const string = 'Welcome to the future';
+// const strArr = string.split(' ');
+// console.log(strArr);
+// let result = '';
+// for (let i = 0; i < strArr.length; i += 1) {
+//     result += strArr[i].split('').reverse('').join('') + ' ';
+// }
+// console.log(result);// emocleW ot eht erutuf 
+
 
