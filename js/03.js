@@ -4,14 +4,14 @@
 // Выведите в консоль первый элемент массива.
 // Выведите в консоль последний элемент массива. Код должен работать для массива произвольной длины.
 // Удалите первый элемент и выведите его в консоль.
-// Вставьте «Country» и «Reggy» в начало массива.
+// // Вставьте «Country» и «Reggy» в начало массива.
 // const genres = ['Jazz', 'Blues'];
-// genres.push('Рок-н-ролл');
+// // genres.push('Рок-н-ролл');
 
 // // console.log(genres[0]);
 // // console.log(genres[genres.length - 1]);
 // // console.log(genres.shift());
-// // genres.unshift('Country', 'Reggy')
+// genres.unshift('Country', 'Reggy')
 // console.log(genres);
 
 // =======Example 2 - Массивы и строки========
