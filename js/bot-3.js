@@ -2,14 +2,6 @@
 // Задание
 // Перебери объект apartment используя цикл for...in и запиши в массив keys все его ключи, а в массив values все значения его свойств.
 
-// Тесты
-// Объявлена переменная apartment
-// Значение переменной apartment это объект
-// Объявлена переменная keys
-// Значение переменной keys это массив ["descr", "rating", "price"]
-// Объявлена переменная values
-// Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153]
-
 // const apartment = {
 //     descr: "Spacious apartment in the city center",
 //     rating: 4,
@@ -28,16 +20,6 @@
 //======= 11 ======
 // Задание
 // Выполни рефакторинг решения предыдущего задания добавив в цикл for...in проверку на собственное свойство.
-
-// Тесты
-// Объявлена переменная advert.
-// Значение переменной advert это объект.
-// Объявлена переменная apartment.
-// Значение переменной apartment это объект.
-// Объявлена переменная keys.
-// Значение переменной keys это массив ["descr", "rating", "price"].
-// Объявлена переменная values.
-// Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153].
 
 // const keys = [];
 // const values = [];
@@ -65,13 +47,6 @@
 // Задание
 // Напиши функцию countProps(object), которая считает и возвращает количество собственных свойств объекта в параметре object. Используй переменную propCount для хранения количества свойств объекта.
 
-// Тесты
-// Объявлена функция countProps(object)
-// Вызов countProps({}) возвращает 0
-// Вызов countProps({ name: "Mango", age: 2 }) возвращает 2
-// Вызов countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) возвращает 3
-// Функция подсчитывает только собственные свойства объекта
-
 // function countProps(object) {
 //     let propCount = 0;
 //     // Change code below this line
@@ -94,15 +69,6 @@
 //  Запиши в переменную keys массив ключей собственных свойств объекта apartment,
 //  и добавь в массив values все значения его свойств.
 
-// Тесты
-// Объявлена переменная apartment.
-// Значение переменной apartment это объект.
-// Объявлена переменная keys.
-// Значение переменной keys это массив ["descr", "rating", "price"].
-// Значение переменной keys получено с помощью метода Object.keys().
-// Объявлена переменная values.
-// Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153].
-// Значение переменной values получено с помощью цикла for...of.
 // const apartment = {
 //     descr: "Spacious apartment in the city center",
 //     rating: 4,
@@ -122,13 +88,6 @@
 // Выполни рефакторинг функции countProps(object) используя метод Object.keys() и, 
 // возможно, но необязательно, цикл for...of.
 
-// Тесты
-// Объявлена функция countProps(object)
-// Вызов countProps({}) возвращает 0
-// Вызов countProps({ name: "Mango", age: 2 }) возвращает 2
-// Вызов countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) возвращает 3
-// Функция подсчитывает только собственные свойства объекта
-// Функция использует метод Object.keys() и, возможно, цикл for...of
 // function countProps(object) {
 //     // Change code below this line
 //     let propCount = 0;
@@ -160,15 +119,6 @@
 // Задание
 // Запиши в переменную keys массив ключей собственных свойств объекта apartment, а в переменную values массив всех значений его свойств. Используй методы Object.keys() и Object.values().
 
-// Тесты
-// Объявлена переменная apartment
-// Значение переменной apartment это объект
-// Объявлена переменная keys
-// Значение переменной keys это массив ["descr", "rating", "price"]
-// Объявлена переменная values
-// Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153]
-// Для получения массива ключей объекта apartment используется Object.keys()
-// Для получения массива значений объекта apartment используется Object.values()
 // const apartment = {
 //     descr: "Spacious apartment in the city center",
 //     rating: 4,
@@ -189,13 +139,6 @@
 // Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её.
 //  Используй переменную totalSalary для хранения общей суммы зарплаты.
 
-// Тесты
-// Объявлена функция countTotalSalary(salaries)
-// Вызов countTotalSalary({}) возвращает 0
-// Вызов countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) возвращает 330
-// Вызов countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) возвращает 400
-// Функция учитывает только собственные свойства объекта
-
 // function countTotalSalary(salaries) {
 //     let totalSalary = 0;
 //     const values = Object.values(salaries);
@@ -214,14 +157,6 @@
 // Задание
 // Перебери массив объектов colors используя цикл for...of. Добавь в массив hexColors 
 // значения свойств hex, а в массив rgbColors значения свойств rgb из всех объектов массива colors.
-
-// Тесты
-// Объявлена переменная colors
-// Значение переменной colors это массив
-// Объявлена переменная hexColors
-// Значение переменной hexColors это массив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
-// Объявлена переменная rgbColors
-// Значение переменной rgbColors это массив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
 
 // const colors = [
 //     { hex: "#f44336", rgb: "244,67,54" },
@@ -248,14 +183,6 @@
 // продукта с таким именем (свойство name) в массиве products и 
 // возвращает его цену (свойство price). Если продукт с таким названием не найден, 
 // функция должна возвращать null.
-
-// Тесты
-// Объявлена функция getProductPrice(productName).
-// Вызов getProductPrice("Radar") возвращает 1300.
-// Вызов getProductPrice("Grip") возвращает 1200.
-// Вызов getProductPrice("Scanner") возвращает 2700.
-// Вызов getProductPrice("Droid") возвращает 400.
-// Вызов getProductPrice("Engine") возвращает null.
 
 // const products = [
 //     { name: "Radar", price: 1300, quantity: 4 },
@@ -288,13 +215,6 @@
 //  всех значений свойства с таким именем из каждого объекта в массиве products. 
 // Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
 
-// Тесты
-// Объявлена функция getAllPropValues(propName)
-// Вызов getAllPropValues("name") возвращает ["Radar", "Scanner", "Droid", "Grip"]
-// Вызов getAllPropValues("quantity") возвращает [4, 3, 7, 9]
-// Вызов getAllPropValues("price") возвращает [1300, 2700, 400, 1200]
-// Вызов getAllPropValues("category") возвращает []
-
 // const products = [
 //     { name: "Radar", price: 1300, quantity: 4 },
 //     { name: "Scanner", price: 2700, quantity: 3 },
@@ -325,14 +245,6 @@
 // Напиши функцию calculateTotalPrice(productName) которая принимает 
 // один параметр productName - название товара. Функция должна вернуть 
 // общую стоимость (цена * количество) товара с таким именем из массива products.
-
-// Тесты
-// Объявлена функция calculateTotalPrice(productName)
-// Вызов calculateTotalPrice("Blaster") возвращает 0
-// Вызов calculateTotalPrice("Radar") возвращает 5200
-// Вызов calculateTotalPrice("Droid") возвращает 2800
-// Вызов calculateTotalPrice("Grip") возвращает 10800
-// Вызов calculateTotalPrice("Scanner") возвращает 8100
 
 // const products = [
 //     { name: "Radar", price: 1300, quantity: 4 },
@@ -365,18 +277,6 @@
 //  температуру за три дня (meanTemperature). Замени объявления переменных yesterday, 
 //  today и tomorrow одной операцией деструктуризации свойств объекта highTemperatures.
 
-// Тесты
-// Объявлена переменная highTemperatures
-// Значение переменной highTemperatures это объект
-// Объявлена переменная yesterday с помощью деструктуризации
-// Значение переменной yesterday это число 28
-// Объявлена переменная today с помощью деструктуризации
-// Значение переменной today это число 26
-// Объявлена переменная tomorrow с помощью деструктуризации
-// Значение переменной tomorrow это число 33
-// Объявлена переменная meanTemperature
-// Значение переменной meanTemperature это число 29
-// Используется синтаксис деструктуризации объекта highTemperatures
 // const highTemperatures = {
 //     yesterday: 28,
 //     today: 26,
@@ -403,19 +303,6 @@
 // today, tomorrow и icon одной операцией деструктуризации свойств объекта 
 // highTemperatures. Задай значение по умолчанию для icon - 
 // строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
-
-// Тесты
-// Объявлена переменная highTemperatures
-// Значение переменной highTemperatures это объект
-// Oбъявлена переменная yesterday с помощью деструктуризации
-// Значение переменной yesterday это число 28
-// Объявлена переменная today с помощью деструктуризации
-// Значение переменной today это число 26
-// Объявлена переменная tomorrow с помощью деструктуризации
-// Значение переменной tomorrow это число 33
-// Объявлена переменная icon с помощью деструктуризации
-// Значение переменной icon это строка "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
-// Используется деструктуризация объекта
 
 // const highTemperatures = {
 //     yesterday: 28,
@@ -449,18 +336,6 @@
 // одной операцией деструктуризации свойств объекта highTemperatures. Задай значение
 //  по умолчанию для highIcon - строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
-// Тесты
-// Объявлена переменная highTemperatures
-// Значение переменной highTemperatures это объект
-// Объявлена переменная highYesterday
-// Значение переменной highYesterday это число 28
-// Объявлена переменная highToday
-// Значение переменной highToday это число 26
-// Объявлена переменная highTomorrow
-// Значение переменной highTomorrow это число 33
-// Объявлена переменная highIcon
-// Значение переменной highIcon это строка "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
-// Используется деструктуризация объекта
 // const highTemperatures = {
 //     yesterday: 28,
 //     today: 26,
@@ -486,4 +361,181 @@
 //   console.log(highToday); //26
 //   console.log(highTomorrow);  //33 
 //   console.log(highIcon); //https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg
+
+// ======== 24 ==========
+// Задание
+// Выполни рефакторинг цикла for...of так, чтобы в нём использовалась деструктуризация объекта..
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const { hex, rgb }  of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// ========= 25 =========
+// Задание
+// Мы получили прогноз погоды на два дня, с минимальными и максимальными температурами,
+//  а также необязательными иконками. Замени объявления всех переменных одной операцией 
+//  деструктуризации свойств объекта forecast. Задай значение по умолчанию для иконок,
+//   переменных todayIcon и tomorrowIcon - строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+
+// const {
+//   today: { high: highToday, low: lowToday, icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",},
+//   tomorrow: { high: highTomorrow, low: lowTomorrow, icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",}
+// } = forecast;
+
+// // const highToday = forecast.today.high;
+// // const lowToday = forecast.today.low;
+// // const todayIcon = forecast.today.icon;
+
+// // const highTomorrow = forecast.tomorrow.high;
+// // const lowTomorrow = forecast.tomorrow.low;
+// // const tomorrowIcon = forecast.tomorrow.icon;
+
+// console.log(highToday);// 32
+// console.log(lowToday); //28
+// console.log(todayIcon); // link
+// console.log(highTomorrow); //31
+// console.log(lowTomorrow); //27
+// console.log(tomorrowIcon);// link
+
+//======== 26 ========
+// Задание
+// Функция calculateMeanTemperature(forecast) принимает один параметр forecast - 
+// объект температур на два дня следующего формата.
+
+// {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 }
+// }
+// Замени объявления переменных todayLow, todayHigh, tomorrowLow и 
+// tomorrowHigh одной операцией деструктуризации свойств объекта forecast.
+
+// function calculateMeanTemperature(forecast) {
+//   const {
+//       today: { low: todayLow, high: todayHigh },
+//       tomorrow: { low: tomorrowLow, high: tomorrowHigh }
+//     } = forecast;
+//   // const todayLow = forecast.today.low;
+//   // const todayHigh = forecast.today.high;
+//   // const tomorrowLow = forecast.tomorrow.low;
+//   // const tomorrowHigh = forecast.tomorrow.high;
+
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+// console.log(calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }));// 28.5
+// console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} })); // 37
+
+// ========== 27 ========
+// Задание
+// В переменной scores хранится массив результатов тестирования. 
+// Используя распыление и методы Math.max() и Math.min() дополни код так, 
+// чтобы в переменной bestScore был самый высокий балл, а в worstScore самый низкий.
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...(scores));
+// const worstScore = Math.min(...(scores));
+// console.log(bestScore); // 93
+// console.log(worstScore); // 17
+
+// ======== 28 ========
+// Задание
+// В переменных firstGroupScores, secondGroupScores и thirdGroupScores 
+// хранятся результаты тестирования отдельных групп. Используя распыление 
+// дополни код так, чтобы:
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores]; 
+// const bestScore = Math.max(...(allScores));
+// const worstScore = Math.min(...(allScores));
+// console.log(allScores); // [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81]
+// console.log(bestScore); // 97
+// console.log(worstScore); //14
+
+// ======== 29 =======
+// Задание
+// В конструкторе можно создавать новые тесты, для которых есть настройки по 
+// умолчанию которые хранятся в переменной defaultSettings. 
+// Во время создания теста, все или часть настроек можно переопределить, 
+// они хранятся в переменной overrideSettings.
+
+// Для того чтобы получить финальные настройки теста, необходимо взять 
+// настройки по умолчанию и поверх них применить переопределённые настройки. 
+// Дополни код так, чтобы в переменной finalSettings получился объект финальных настроек теста.
+
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// // const finalSettings = {...defaultSettings, ...overrideSettings};
+// // const finalSettings = {theme: "light", ...defaultSettings, minNumberOfQuestions: 10, ...overrideSettings};
+// console.log(finalSettings); // {theme: 'light', public: false, withPassword: true, minNumberOfQuestions: 10, timePerQuestion: 30}
+
+// ======== 30 ========== Задача. Карточки задач
+// Задание
+// Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
+
+// text - текст задачи.
+// category - категория задачи.
+// priority - приоритет задачи.
+// Функция должна составить и вернуть новый объект задачи, не изменяя напрямую параметр data.
+//  В новом объекте должно быть свойство completed, значение которого хранится в одноимённой 
+//  локальной переменной.
+
+// В параметре data гарантированно будет только свойство text, а остальные два, 
+// category и priority, могут отсутствовать. Тогда, в новом объекте задачи, в свойствах 
+// category и priority должны быть значения по умолчанию, хранящиеся в одноимённых локальных переменных.
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+// const newData = {category, priority, ...data, completed };
+// return newData;
+//   // Change code above this line
+// }
+
+// console.log(makeTask({}));// возвращает { category: "General", priority: "Normal", completed: false }
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));// возвращает { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));// возвращает { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));// возвращает { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+// console.log(makeTask({ text: "Buy bread" })); // возвращает { category: "General", priority: "Normal", text: "Buy bread", completed: false }
+
 
