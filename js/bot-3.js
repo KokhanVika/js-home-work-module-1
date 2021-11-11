@@ -538,4 +538,334 @@
 // console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));// возвращает { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
 // console.log(makeTask({ text: "Buy bread" })); // возвращает { category: "General", priority: "Normal", text: "Buy bread", completed: false }
 
+// ======= 31 =======
+// Задание
+// Используя операцию rest дополни код функции add() так, чтобы она принимала любое количество 
+// аргументов, считала и возвращала их сумму.
+
+// Change code below this line
+// function add(...args) {
+//   // Change code above this line
+//   let total = 0;
+//   for (const arg of args) {
+//   total += arg;
+//   }
+//   return total;
+// };
+// console.log(add(15, 27));// возвращает 42
+// console.log(add(12, 4, 11, 48));// возвращает 75
+// console.log(add(32, 6, 13, 19, 8));// возвращает 78
+// console.log(add(74, 11, 62, 46, 12, 36));// возвращает 241
+
+//======= 32 =======
+// Задание
+// Функция addOverNum() считает сумму всех аргументов. Измени параметры и тело 
+// функции addOverNum() так, чтобы она считала сумму только тех аргументов, 
+// которые больше чем заданное число. Это число должно быть первым параметром функции.
+
+
+// function addOverNum(fistNumber,...args) {
+//      let total = 0;
+   
+//      for (const arg of args) {
+//        if (arg > fistNumber) {
+//        total += arg;
+//      }
+//      }
+//         return total;
+//    }
+
+// console.log(addOverNum(50, 15, 27)); // возвращает 0
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8)); // возвращает 71
+// console.log(addOverNum(15, 32, 6, 13, 19, 8)); // возвращает 51
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); // возвращает 218
+
+// ====== 33 ======== Задача. Массив совпадений
+// Задание
+// Функция findMatches() принимает произвольное количество аргументов.
+//  Первым аргументом всегда будет массив чисел, а остальные аргументы будут 
+//  просто числами.
+
+// Дополни код функции так, чтобы она возвращала новый массив matches,
+//  в котором будут только те аргументы, начиная со второго, которые есть 
+//  в массиве первого аргумента.
+
+// Например, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) должна вернуть массив [1, 2], 
+// потому что только они есть в массиве первого аргумента.
+
+// // Change code below this line
+// function findMatches(array, ...args) {
+//   const matches = []; // Don't change this line
+//   for (let i = 0; i < args.length; i += 1) {
+//   if (array.includes(args[i])) {     
+//       matches.push(args[i]);
+//   }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+ 
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));// возвращает [1, 2]
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));// возвращает [17, 89, 2]
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));// возвращает [24, 9, 41]
+// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));// возвращает []
+
+// ======= 34 ======== Задание
+// Добавь объекту bookShelf ещё два метода, которые пока что будут возвращать просто 
+// строки по аналогии с getBooks() и addBook(bookName).
+// Метод removeBook(bookName) будет удалять книгу по имени. Возвращает строку 
+// "Deleting book <имя книги>", где <имя книги> это значение параметра bookName.
+// Метод updateBook(oldName, newName) будет обновлять название книги на новое. 
+// Возвращает строку "Updating book <старое имя> to <новое имя>", где <старое имя> и <новое имя>это значения параметров oldName и newName соотвественно.
+
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     return `Deleting book ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//     return `Updating book ${oldName} to ${newName}`;
+//   }
+//   // Change code above this line
+// };
+// console.log(bookShelf.getBooks());// возвращает строку "Возвращаем все книги"
+// console.log(bookShelf.addBook("Haze"));// возвращает строку "Adding book Haze"
+// console.log(bookShelf.removeBook("Red sunset"));// возвращает строку "Deleting book Red sunset"
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));// возвращает строку "Updating book Sands of dune to Dune"
+
+// ======= 35 ========= Задание
+// Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги
+//  с oldName на newName в свойстве books. Используй indexOf() для того, чтобы 
+//  найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookArr = this.books.indexOf(oldName);
+//     this.books.splice(bookArr, 1, newName);
+//     // Change code above this line
+//   },
+// };
+// bookShelf.updateBook("Haze", "Dungeon chronicles");
+// console.log(bookShelf);// значение свойства books это массив ["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+// bookShelf.updateBook("The last kingdom", "Dune");
+// console.log(bookShelf);// значение свойства books это массив ["Dune", "Haze", "The guardian of dreams"]
+
+// ======= 36 ======= Задача. Лавка зелий «У старой жабы»
+// Задание
+// К нам обратилась владелица лавки зелий «У старой жабы» и заказала
+//  программу для ведения инвентаря - добавления, удаления, поиска и
+//   обновления зелий. Добавь объекту atTheOldToad свойство potions, 
+//   значением которого сделай пустой массив.
+
+// const atTheOldToad = {
+//   // Change code below this line
+//   potions: [],
+//   // Change code above this line
+// };
+// console.log(atTheOldToad);
+
+
+// ===== 37 ======= Задача. Получаем все зелья
+// Задание
+// Добавь объекту atTheOldToad метод getPotions(), который просто возвращает 
+// значение свойства potions.
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   }
+
+//   // Change code above this line
+// };
+// console.log(atTheOldToad.getPotions());//["Speed potion", "Dragon breath", "Stone skin"]
+
+// ======= 38 ======== Задача: добавляем новое зелье
+// Задание
+// Дополни метод addPotion(potionName) так, чтобы он добавлял зелье potionName
+//  в конец массива зелий в свойстве potions.
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   addPotion(potionName) {
+//     // Change code below this line
+//   return this.potions.push(potionName);
+//     // Change code above this line
+//   },
+// };
+// atTheOldToad.addPotion("Invisibility");
+// console.log(atTheOldToad);
+// atTheOldToad.addPotion("Power potion");
+// console.log(atTheOldToad);
+
+// ======== 39 ======== Задача. Удаляем зелье
+// Задание
+// Дополни метод removePotion(potionName) так, чтобы он удалял зелье 
+// potionName из массива зелий в свойстве potions.
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     return this.potions.splice(this.potions.indexOf(potionName), 1);
+
+//     // Change code above this line
+//   },
+// };
+// atTheOldToad.removePotion("Dragon breath");
+// console.log(atTheOldToad);
+// atTheOldToad.removePotion("Speed potion");
+// console.log(atTheOldToad);
+
+// ====== 40 ======== Задача: обновляем зелье
+// Задание
+// Дополни метод updatePotionName(oldName, newName) так, чтобы он обновлял
+//  название зелья с oldName на newName, в массиве зелий в свойстве potions.
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+//     const array = this.potions.indexOf(oldName);
+//     this.potions.splice(array, 1, newName);
+
+//     // Change code above this line
+//   },
+// };
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth"),
+// console.log(atTheOldToad); // в свойстве potions будет массив ["Speed potion", "Polymorth", "Stone skin"]
+// atTheOldToad.updatePotionName("Stone skin", "Invisibility"), 
+// console.log(atTheOldToad);// в свойстве potions будет массив ["Speed potion", "Polymorth", "Invisibility"]
+
+// Задача: расширяем инвентарь
+// Задание
+// Заказчица хочет чтобы каждое зелье было представлено не только именем, но и ценой,
+//  а в будущем может быть и другими характеристиками. Поэтому теперь в свойстве potions 
+//  будет храниться массив объектов со следующими свойствами.
+
+// {
+//   name: "Dragon breath",
+//   price: 700
+// }
+// Выполни рефакторинг методов объекта atTheOldToad так, чтобы они работали не с массивом строк, а с массивом объектов.
+
+// getPotions() - метод для получения всех зелий. Возвращает значение свойства potions.
+// addPotion(newPotion) - добавляет зелье newPotion (уже объект) в массив в свойстве potions, но только если такого зелья еще нет в инвентаре. В противном случае возвращается строка.
+// removePotion(potionName) - удаляет объект зелья с именем potionName из массива в свойстве potions.
+// // // updatePotionName(oldName, newName) - обновляет свойство name объекта-зелья с названием oldName на newName в массиве potions.
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+  },
+  // addPotion(newPotion) {
+  //   if (this.potions.includes(newPotion)) {
+  //     return `Error! Potion ${newPotion} is already in your inventory!`;
+  //   }
+
+  //   this.potions.push(newPotion);
+  // },
+  // addPotion(newPotion) {
+
+  //   const { potions } = this;
+  //   const { name } = newPotion;
+  //   for (let i = 0; i < potions.length; i += 1) {
+  //     if (potions[i].name === name) {
+  //       return `Error! Potion ${name} is already in your inventory!`;;
+  //     }
+  //     potions.push(newPotion);
+  //   }
+  // },
+  // addPotion(newPotion) {
+  //   for (const potion of this.potions) {
+  //     if (newPotion.name === potion.name) {
+  //        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+  //   }
+  //   }
+  //   this.potions.push(newPotion);
+  // },
+  // removePotion(potionName) {
+  //   const potionIndex = this.potions.indexOf(potionName);
+
+  //   if (potionIndex === -1) {
+  //     return `Potion ${potionName} is not in inventory!`;
+  //   }
+
+  //   this.potions.splice(potionIndex, 1);
+  // },
+  // removePotion(potionName) {
+    
+  //   const { potions } = this;
+  //   for (let i = 0; i < potions.length; i += 1) {
+  //     if (potions[i].name === potionName) {
+  //       potions.splice(i, 1);
+  //       return potions;
+  //     }
+  //   }
+  //   return `Potion ${potionName} is not in inventory!`;
+  // },
+//   removePotion(potionName) {
+//     for(const potion of this.potions) {
+//       if (potion.name === potionName) {
+// this.potions.splice(this.potions.indexOf(potion),1);}
+// }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+  // updatePotionName(oldName, newName) {
+  //   const potionIndex = this.potions.indexOf(oldName);
+
+  //   if (potionIndex === -1) {
+  //     return `Potion ${oldName} is not in inventory!`;
+  //   }
+
+  //   this.potions.splice(potionIndex, 1, newName);
+  // },
+  // updatePotionName(oldName, newName) {
+  //   const { potions } = this;
+  //   for (let i = 0; i < potions.length; i += 1) {
+  //     if (potions[i].name === oldName) {
+  //       potions[i].name = newName;
+  //       return potions;
+  //     }
+  //   }
+  //   return `Potion ${oldName} is not in inventory!`;
+  // },
+  // updatePotionName(oldName, newName) {
+  //   for(const potion of this.potions) {
+  //     if (potion.name === oldName) {
+  //       potion.name = newName;
+  //       return this.potions;
+  //     }
+  //   }
+  //   return `Potion ${oldName} is not in inventory!`;
+  // },
+
+
+  // Change code above this line
+};
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 })); 
+// console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+// console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.removePotion("Speed potion"));
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
+
 
