@@ -772,7 +772,7 @@
 //   // Change code below this line
 //   getPotions() {
 //     return this.potions;
-  },
+  // },
   // addPotion(newPotion) {
   //   if (this.potions.includes(newPotion)) {
   //     return `Error! Potion ${newPotion} is already in your inventory!`;
@@ -857,7 +857,7 @@
 
 
   // Change code above this line
-};
+// };
 // console.log(atTheOldToad.getPotions());
 // console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
 // console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 })); 
